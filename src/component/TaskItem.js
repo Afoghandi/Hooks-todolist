@@ -1,14 +1,15 @@
 import React from "react";
-import { FaCheck, FaTrashAlt } from "react-icons/fa";
+import { FaCheck, FaTrashAlt, FaEdit } from "react-icons/fa";
 
 const TaskItem = ({ task }) => {
-	const { item } = task;
+	const { chore } = task;
 	return (
 		<section>
 			<div className="task">
-				{item}
+				{chore}
 				<FaTrashAlt className="icon" />
 				<FaCheck className="icon" />
+				<FaEdit className="icon" />
 			</div>
 		</section>
 	);
