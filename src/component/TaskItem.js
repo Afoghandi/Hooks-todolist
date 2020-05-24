@@ -1,16 +1,16 @@
 import React from "react";
-import { FaCheck, FaTrashAlt, FaEdit } from "react-icons/fa";
+import { FaTrashAlt, FaEdit } from "react-icons/fa";
 
-const TaskItem = ({ task }) => {
-	const { chore } = task;
+const TaskItem = ({ task, handleEdit, handleDelete, handleCheck }) => {
+	const { chore, id } = task;
 	return (
 		<section>
-			<div className="task">
+			<li className="task">
 				{chore}
-				<FaTrashAlt className="icon" />
-				<FaCheck className="icon" />
-				<FaEdit className="icon" />
-			</div>
+
+				<FaTrashAlt className="icon" onClick={() => handleDelete(id)} />
+				<FaEdit className="icon" onClick={() => handleEdit(id)} />
+			</li>
 		</section>
 	);
 };

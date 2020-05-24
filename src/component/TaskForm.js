@@ -1,6 +1,6 @@
 import React from "react";
 
-const TaskForm = ({ chore, handleChore, handleSubmit }) => {
+const TaskForm = ({ chore, handleChore, handleSubmit, edit }) => {
 	return (
 		<div className="container">
 			<form onSubmit={handleSubmit}>
@@ -15,8 +15,7 @@ const TaskForm = ({ chore, handleChore, handleSubmit }) => {
 					onChange={handleChore}
 				/>
 				<button type="submit" className="btn">
-					{" "}
-					Submit
+					{edit ? "edit" : "submit"}
 				</button>
 			</form>
 		</div>
